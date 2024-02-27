@@ -14,7 +14,10 @@ results_df = pd.DataFrame.from_records (results)
 
 print (results_df.keys(), "\n")
 
-print(tabulate(results_df, tablefmt='github'))
+subset = results_df[['departamento_nom', 'ciudad_municipio_nom', 'edad']]
+
+
+print(tabulate(subset, tablefmt='github', headers=('DEPARTAMENTO', 'CIUDAD', 'EDAD')))
 
 
 
